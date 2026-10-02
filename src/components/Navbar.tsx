@@ -23,9 +23,9 @@ export const Navbar: React.FC = () => {
   const navLinks = [
     { name: 'Home', href: '#/', active: currentHash === '#/' },
     { name: 'About', href: '#/about', active: currentHash.startsWith('#/about') },
-    { name: 'Events', href: '#', active: false },
-    { name: 'Schedule', href: '#', active: false },
-    { name: 'Sponsors', href: '#', active: false },
+    { name: 'Events', href: '#/events', active: currentHash.startsWith('#/events') },
+    { name: 'Schedule', href: '#/schedule', active: currentHash.startsWith('#/schedule') },
+    { name: 'Sponsors', href: '#/sponsors', active: currentHash.startsWith('#/sponsors') },
     { name: 'Contact', href: '#/contact', active: currentHash.startsWith('#/contact') },
   ];
 

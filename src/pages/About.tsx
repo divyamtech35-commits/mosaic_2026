@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { Navbar } from '../components/Navbar';
 import { PageHeader } from '../components/PageHeader';
 import { ParchmentCard } from '../components/ParchmentCard';
@@ -9,10 +9,6 @@ import { AboutFooter } from '../components/AboutFooter';
 import { Footer } from '../components/Footer';
 
 export const About: React.FC = () => {
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
-
   return (
     <main className="min-h-screen overflow-x-hidden font-sans relative bg-mosaic-navy">
       {/* 1. EXACT SAME BACKGROUND AS HOME PAGE */}
