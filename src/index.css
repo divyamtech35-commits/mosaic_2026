@@ -1,0 +1,37 @@
+@import "tailwindcss";
+@config "../tailwind.config.js";
+
+@layer base {
+  body {
+    @apply bg-mosaic-navy text-white font-sans antialiased;
+    overflow-x: hidden;
+  }
+}
+
+@layer utilities {
+  .text-glow {
+    text-shadow: 0 0 10px rgba(217, 164, 65, 0.5), 0 0 20px rgba(217, 164, 65, 0.3);
+  }
+  
+  .glass-panel {
+    @apply bg-mosaic-navy/40 backdrop-blur-md border border-mosaic-gold/30 shadow-[0_0_15px_rgba(217,164,65,0.1)] inset-0;
+  }
+
+  .orbital-spin {
+    animation: orbital-spin 90s linear infinite;
+  }
+  
+  .orbital-spin-reverse {
+    animation: orbital-spin-reverse 120s linear infinite;
+  }
+}
+
+@keyframes orbital-spin {
+  from { transform: translate(-50%, -50%) rotate(0deg); }
+  to { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+@keyframes orbital-spin-reverse {
+  from { transform: translate(-50%, -50%) rotate(0deg); }
+  to { transform: translate(-50%, -50%) rotate(-360deg); }
+}
