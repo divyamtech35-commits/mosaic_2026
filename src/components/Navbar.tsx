@@ -1,26 +1,32 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { useCurrentHash } from '../hooks/useCurrentHash';
 
 export const Navbar: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const currentHash = useCurrentHash();
 
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
     };
+    
     window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
   }, []);
 
   const navLinks = [
-    { name: 'Home', href: '#', active: true },
-    { name: 'About', href: '#' },
-    { name: 'Events', href: '#' },
-    { name: 'Schedule', href: '#' },
-    { name: 'Sponsors', href: '#' },
-    { name: 'Contact', href: '#' },
+    { name: 'Home', href: '#/', active: currentHash === '#/' },
+    { name: 'About', href: '#/about', active: currentHash.startsWith('#/about') },
+    { name: 'Events', href: '#', active: false },
+    { name: 'Schedule', href: '#', active: false },
+    { name: 'Sponsors', href: '#', active: false },
+    { name: 'Contact', href: '#', active: false },
   ];
 
   return (
@@ -78,6 +84,7 @@ export const Navbar: React.FC = () => {
               <a
                 key={link.name}
                 href={link.href}
+                onClick={() => setIsMobileMenuOpen(false)}
                 className={`font-sans text-lg tracking-wide ${link.active ? 'text-mosaic-gold' : 'text-gray-300'
                   }`}
               >

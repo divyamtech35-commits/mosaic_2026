@@ -3,6 +3,7 @@ import { Navbar } from '../components/Navbar';
 import { Hero } from '../components/Hero';
 import { HeroTransition } from '../components/HeroTransition';
 import { FeaturedEvents } from '../components/FeaturedEvents';
+import { Footer } from '../components/Footer';
 
 export const Home: React.FC = () => {
   return (
@@ -11,9 +12,7 @@ export const Home: React.FC = () => {
       <Hero />
       <HeroTransition />
       <FeaturedEvents />
-      
-      {/* Empty space to show scrolling effect */}
-      <div className="h-32 bg-mosaic-cream"></div>
+      <Footer />
     </main>
   );
 };
