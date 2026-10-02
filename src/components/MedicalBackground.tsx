@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 export const MedicalBackground: React.FC = () => {
   // Generate random particles (representing cells/molecules)
   const [particles, setParticles] = useState<{ id: number, x: number, y: number, size: number, delay: number, duration: number }[]>([]);
-  
+
   useEffect(() => {
     const newParticles = Array.from({ length: 40 }).map((_, i) => ({
       id: i,
@@ -27,8 +27,8 @@ export const MedicalBackground: React.FC = () => {
         <motion.div
           key={p.id}
           initial={{ opacity: 0, x: `${p.x}vw`, y: `${p.y}vh` }}
-          animate={{ 
-            opacity: [0, 0.4, 0],
+          animate={{
+            opacity: [0, 0.2, 0],
             y: [`${p.y}vh`, `${p.y - 30}vh`]
           }}
           transition={{
@@ -61,7 +61,7 @@ export const MedicalBackground: React.FC = () => {
           />
         </svg>
       </div>
-      
+
       {/* Animated EKG Line 2 (Secondary Cyan/Blue) */}
       <div className="absolute top-[20%] right-0 w-full h-32 opacity-10 flex items-center justify-center rotate-2">
         <svg viewBox="0 0 1000 100" className="w-[200%] md:w-[120%] h-full stroke-cyan-400" preserveAspectRatio="none">
@@ -106,7 +106,7 @@ export const MedicalBackground: React.FC = () => {
 
       {/* Central Soft Radial Glow behind Crest */}
       <div className="absolute top-[20%] left-1/2 -translate-x-1/2 w-[800px] h-[800px] bg-mosaic-gold/5 rounded-full blur-[120px]" />
-      
+
       {/* Bottom Vignette */}
       <div className="absolute bottom-0 inset-x-0 h-1/3 bg-gradient-to-t from-[#01060d] to-transparent" />
     </div>

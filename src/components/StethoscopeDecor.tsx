@@ -32,7 +32,6 @@ export const StethoscopeDecor: React.FC = () => {
       >
         <Stethoscope size={180} strokeWidth={0.75} />
       </motion.div>
-
       {/* Animated EKG Line (Heartbeat) */}
       <div className="absolute bottom-[25%] left-0 w-full h-32 opacity-25 flex items-center justify-center pointer-events-none mix-blend-screen">
         <svg viewBox="0 0 1000 100" className="w-[150%] md:w-full h-full stroke-mosaic-gold" preserveAspectRatio="none">

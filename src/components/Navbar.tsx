@@ -26,7 +26,7 @@ export const Navbar: React.FC = () => {
     { name: 'Events', href: '#', active: false },
     { name: 'Schedule', href: '#', active: false },
     { name: 'Sponsors', href: '#', active: false },
-    { name: 'Contact', href: '#', active: false },
+    { name: 'Contact', href: '#/contact', active: currentHash.startsWith('#/contact') },
   ];
 
   return (
