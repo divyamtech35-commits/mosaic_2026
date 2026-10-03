@@ -12,9 +12,9 @@ export const Navbar: React.FC = () => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
     };
-    
+
     window.addEventListener('scroll', handleScroll);
-    
+
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
@@ -32,18 +32,18 @@ export const Navbar: React.FC = () => {
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled
-          ? 'bg-mosaic-navy/90 backdrop-blur-md border-b border-mosaic-gold/20 py-4 shadow-lg'
-          : 'bg-transparent py-6 border-b border-transparent'
+        ? 'bg-mosaic-navy/90 backdrop-blur-md border-b border-mosaic-gold/20 py-4 shadow-lg'
+        : 'bg-transparent py-6 border-b border-transparent'
         }`}
     >
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between relative">
         {/* Logo Section */}
-        <div className="flex items-center gap-3 z-10">
-          <div className="w-10 h-10 overflow-hidden rounded-md border border-mosaic-gold/30">
+        <a href="#/" className="flex items-center gap-3 z-20 group">
+          <div className="w-10 h-10 overflow-hidden rounded-md border border-mosaic-gold/30 group-hover:border-mosaic-gold/60 transition-colors">
             <img src="/mosaic-logo.png" alt="Mosaic Logo" className="w-full h-full object-cover scale-150" />
           </div>
-          <span className="font-serif text-xl text-white tracking-widest uppercase">Mosaic 2026</span>
-        </div>
+          <span className="font-serif text-xl text-white tracking-widest uppercase group-hover:text-mosaic-gold transition-colors">Mosaic 2026</span>
+        </a>
 
         {/* Desktop Nav */}
         <div className="hidden lg:flex absolute inset-0 items-center justify-center gap-8 pointer-events-none">
@@ -52,8 +52,8 @@ export const Navbar: React.FC = () => {
               key={link.name}
               href={link.href}
               className={`pointer-events-auto font-sans text-sm tracking-wide transition-colors ${link.active
-                  ? 'text-mosaic-gold border-b border-mosaic-gold pb-1'
-                  : 'text-gray-300 hover:text-white'
+                ? 'text-mosaic-gold border-b border-mosaic-gold pb-1'
+                : 'text-gray-300 hover:text-white'
                 }`}
             >
               {link.name}
