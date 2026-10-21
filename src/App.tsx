@@ -5,6 +5,8 @@ import { About } from './pages/About';
 import { Contact } from './pages/Contact';
 import { NotFound } from './pages/NotFound';
 import { ComingSoon } from './pages/ComingSoon';
+import { Events } from './pages/Events';
+import { Workshops, WorkshopDetail } from './pages/Workshops';
 
 function App() {
   const currentPath = useCurrentHash();
@@ -25,7 +27,18 @@ function App() {
   }
 
   if (normalizedPath === '#/events') {
-    return <ComingSoon title="Events" />;
+    return <Events />;
+  }
+
+  if (normalizedPath === '#/events/workshops') {
+    return <Workshops />;
+  }
+
+  if (normalizedPath.startsWith('#/events/workshops/')) {
+    const workshop = normalizedPath.slice('#/events/workshops/'.length) as 'incisio' | 'orthex' | 'rhythmos' | 'analytica' | 'theorem';
+    if (['incisio', 'orthex', 'rhythmos', 'analytica', 'theorem'].includes(workshop)) {
+      return <WorkshopDetail workshop={workshop} />;
+    }
   }
 
   if (normalizedPath === '#/schedule') {

@@ -10,7 +10,7 @@ export const FeaturedEvents: React.FC = () => {
     },
     {
       title: 'SCIENTIFIC QUIZ',
-      subtitle: 'All Gujarat',
+      subtitle: 'All Gujarat Level',
       icon: <BookOpen size={32} className="text-mosaic-gold mb-4" />,
     },
     {
@@ -30,8 +30,8 @@ export const FeaturedEvents: React.FC = () => {
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-4 divide-y sm:divide-y-0 sm:divide-x-0 lg:divide-x divide-mosaic-gold/30">
           {events.map((event, index) => (
-            <div 
-              key={index} 
+            <div
+              key={index}
               className={`flex flex-col items-center text-center px-4 ${index !== 0 ? 'pt-8 sm:pt-0' : ''}`}
             >
               {event.icon}
