@@ -7,6 +7,7 @@ import { NotFound } from './pages/NotFound';
 import { ComingSoon } from './pages/ComingSoon';
 import { Events } from './pages/Events';
 import { Workshops, WorkshopDetail } from './pages/Workshops';
+import { Schedule } from './pages/Schedule';
 
 function App() {
   const currentPath = useCurrentHash();
@@ -42,7 +43,7 @@ function App() {
   }
 
   if (normalizedPath === '#/schedule') {
-    return <ComingSoon title="Schedule" />;
+    return <Schedule />;
   }
 
   if (normalizedPath === '#/sponsors') {

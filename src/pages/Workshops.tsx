@@ -104,16 +104,6 @@ export const Workshops: React.FC = () => {
 };
 
 const workshopDetails = {
-  incisio: {
-    title: 'INCISIO',
-    subtitle: 'Suturing and wound Management workshop',
-    description: 'A hands-on journey into the art of surgery. Learn essential surgical skills, explore instruments, and develop precision and confidence through practical training.',
-    date: '26th November, 2026',
-    time: '2 pm to 5 pm',
-    venue: 'College Auditorium',
-    icon: Scissors,
-    registrationUrl: 'https://docs.google.com/forms/d/e/1FAIpQLSdL6uoy4AEnTSLwcZ0BS8c5iVhRJum9UnI61bGbdjzMMAzi-A/viewform?usp=header',
-  },
   orthex: {
     title: 'ORTHEX',
     subtitle: 'Casting and fracture management workshop',
@@ -123,6 +113,16 @@ const workshopDetails = {
     venue: 'College Auditorium',
     icon: Bone,
     registrationUrl: 'https://docs.google.com/forms/d/e/1FAIpQLSc1eEZARRJa4cpcJfcnJDTV5eEhlS0Ie1SbJpZzzTgNxM7Pzg/viewform?usp=header',
+  },
+  incisio: {
+    title: 'INCISIO',
+    subtitle: 'Suturing and wound Management workshop',
+    description: 'A hands-on journey into the art of surgery. Learn essential surgical skills, explore instruments, and develop precision and confidence through practical training.',
+    date: '26th November, 2026',
+    time: '2 pm to 5 pm',
+    venue: 'College Auditorium',
+    icon: Scissors,
+    registrationUrl: 'https://docs.google.com/forms/d/e/1FAIpQLSdL6uoy4AEnTSLwcZ0BS8c5iVhRJum9UnI61bGbdjzMMAzi-A/viewform?usp=header',
   },
   rhythmos: {
     title: 'RHYTHMOS',
@@ -138,8 +138,8 @@ const workshopDetails = {
     title: 'ANALYTICA',
     subtitle: 'Biochemistry and Pathology based diagnosis of disease',
     description: 'Discover the science behind laboratory investigations. Learn to interpret biochemical and pathological reports, connect findings with clinical conditions, and strengthen your diagnostic understanding.',
-    date: '27th November, 2026',
-    time: '2 pm to 5 pm',
+    date: '26th November, 2026',
+    time: '9 am to 1 pm',
     venue: 'College Auditorium',
     icon: Brain,
     registrationUrl: 'https://docs.google.com/forms/d/e/1FAIpQLSfLd8dpmR-z4tsZJdq2k2yyUfDPWBQ1yy0FbizvB5Tb-wmU3g/viewform?usp=header',
@@ -149,7 +149,7 @@ const workshopDetails = {
     subtitle: 'Research methodology and scientific writing',
     description: 'Turn curiosity into clinical evidence. Explore the basics of medical research, from framing a research question to understanding study designs, interpreting data, and building an evidence-based approach.',
     date: '26th November, 2026',
-    time: '2 pm to 5 pm',
+    time: '9 am to 1 pm',
     venue: 'College Auditorium',
     icon: Activity,
     registrationUrl: 'https://docs.google.com/forms/d/e/1FAIpQLScuw7otkl72V2U56lYeW0ZNuSv4wrrveifTzxYhQte7UIO-jQ/viewform?usp=header',
