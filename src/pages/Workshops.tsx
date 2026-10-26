@@ -156,8 +156,8 @@ const workshopDetails = {
     time: '9 am to 1 pm',
     venue: 'College Auditorium',
     icon: Activity,
-    registrationUrl: 'https://docs.google.com/forms/d/e/1FAIpQLScuw7otkl72V2U56lYeW0ZNuSv4wrrveifTzxYhQte7UIO-jQ/viewform?usp=header',
-    soldOut: true,
+    registrationUrl: 'https://docs.google.com/forms/d/1PtqDXIwTDgGfo1NcYfMRUxWxvwKJUuY25RFf1xfBAKU/edit',
+    soldOut: false,
   },
 };
 
