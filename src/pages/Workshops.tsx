@@ -104,16 +104,6 @@ export const Workshops: React.FC = () => {
 };
 
 const workshopDetails = {
-  orthex: {
-    title: 'ORTHEX',
-    subtitle: 'Casting and fracture management workshop',
-    description: 'Step into the world of orthopaedics and explore the fundamentals of bone and joint care. Gain practical insights into musculoskeletal assessment, fracture management, and orthopaedic techniques.',
-    date: '27th November, 2026',
-    time: '9 am to 1 pm',
-    venue: 'College Auditorium',
-    icon: Bone,
-    registrationUrl: 'https://docs.google.com/forms/d/e/1FAIpQLSc1eEZARRJa4cpcJfcnJDTV5eEhlS0Ie1SbJpZzzTgNxM7Pzg/viewform?usp=header',
-  },
   incisio: {
     title: 'INCISIO',
     subtitle: 'Suturing and wound Management workshop',
@@ -122,7 +112,19 @@ const workshopDetails = {
     time: '2 pm to 5 pm',
     venue: 'College Auditorium',
     icon: Scissors,
-    registrationUrl: 'https://docs.google.com/forms/d/e/1FAIpQLSdL6uoy4AEnTSLwcZ0BS8c5iVhRJum9UnI61bGbdjzMMAzi-A/viewform?usp=header',
+    registrationUrl: 'https://docs.google.com/forms/d/1TTxv_jG57FXjFbmJgn3uohl661rZ8XUKOnFQbaLcbRg/viewform',
+    soldOut: false,
+  },
+  orthex: {
+    title: 'ORTHEX',
+    subtitle: 'Casting and fracture management workshop',
+    description: 'Step into the world of orthopaedics and explore the fundamentals of bone and joint care. Gain practical insights into musculoskeletal assessment, fracture management, and orthopaedic techniques.',
+    date: '27th November, 2026',
+    time: '9 am to 1 pm',
+    venue: 'College Auditorium',
+    icon: Bone,
+    registrationUrl: 'https://docs.google.com/forms/d/1eU4M3eTleCtQZSc6amLVKmgj1xcsQhy5xnQXval-ydw/viewform',
+    soldOut: false,
   },
   rhythmos: {
     title: 'RHYTHMOS',
@@ -132,7 +134,8 @@ const workshopDetails = {
     time: '2 pm to 5 pm',
     venue: 'College Auditorium',
     icon: Waves,
-    registrationUrl: 'https://docs.google.com/forms/d/e/1FAIpQLSdPMAaQiCn7u0fKsxdUEVCdIhRGHDwzNZlEei0YeLheVZtjhw/viewform?usp=header',
+    registrationUrl: 'https://docs.google.com/forms/d/1IHmU5QCLKwtSX7Oyb2piHOkBJpqfrEVfBuFul4503lE/viewform',
+    soldOut: false,
   },
   analytica: {
     title: 'ANALYTICA',
@@ -142,7 +145,8 @@ const workshopDetails = {
     time: '9 am to 1 pm',
     venue: 'College Auditorium',
     icon: Brain,
-    registrationUrl: 'https://docs.google.com/forms/d/e/1FAIpQLSfLd8dpmR-z4tsZJdq2k2yyUfDPWBQ1yy0FbizvB5Tb-wmU3g/viewform?usp=header',
+    registrationUrl: 'https://docs.google.com/forms/d/1tIu0GFQUJUD7aVkdoUiwqFx76FbvESs9oHyGxsybVvo/viewform',
+    soldOut: false,
   },
   theorem: {
     title: 'THEOREM',
@@ -153,6 +157,7 @@ const workshopDetails = {
     venue: 'College Auditorium',
     icon: Activity,
     registrationUrl: 'https://docs.google.com/forms/d/e/1FAIpQLScuw7otkl72V2U56lYeW0ZNuSv4wrrveifTzxYhQte7UIO-jQ/viewform?usp=header',
+    soldOut: true,
   },
 };
 
@@ -213,14 +218,23 @@ export const WorkshopDetail: React.FC<{ workshop: keyof typeof workshopDetails }
               </div>
 
               <div className="px-7 pb-9 md:px-12 md:pb-12">
-                <a
-                  href={details.registrationUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center justify-center rounded-full border border-mosaic-gold/50 bg-mosaic-gold/10 px-8 py-3 text-sm font-medium uppercase tracking-[0.18em] text-mosaic-gold transition-colors hover:bg-mosaic-gold hover:text-mosaic-navy focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-mosaic-gold focus-visible:ring-offset-2 focus-visible:ring-offset-mosaic-navy"
-                >
-                  Register
-                </a>
+                {details.soldOut ? (
+                  <span
+                    role="status"
+                    className="inline-flex cursor-not-allowed items-center justify-center rounded-full border border-red-300/40 bg-red-400/10 px-8 py-3 text-sm font-semibold uppercase tracking-[0.18em] text-red-200"
+                  >
+                    Sold Out
+                  </span>
+                ) : (
+                  <a
+                    href={details.registrationUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center justify-center rounded-full border border-mosaic-gold/50 bg-mosaic-gold/10 px-8 py-3 text-sm font-medium uppercase tracking-[0.18em] text-mosaic-gold transition-colors hover:bg-mosaic-gold hover:text-mosaic-navy focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-mosaic-gold focus-visible:ring-offset-2 focus-visible:ring-offset-mosaic-navy"
+                  >
+                    Register
+                  </a>
+                )}
               </div>
             </article>
           </div>
