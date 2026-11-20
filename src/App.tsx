@@ -4,10 +4,10 @@ import { Home } from './pages/Home';
 import { About } from './pages/About';
 import { Contact } from './pages/Contact';
 import { NotFound } from './pages/NotFound';
-import { ComingSoon } from './pages/ComingSoon';
 import { Events } from './pages/Events';
 import { Workshops, WorkshopDetail } from './pages/Workshops';
 import { Schedule } from './pages/Schedule';
+import { Sponsors } from './pages/Sponsors';
 
 function App() {
   const currentPath = useCurrentHash();
@@ -47,7 +47,7 @@ function App() {
   }
 
   if (normalizedPath === '#/sponsors') {
-    return <ComingSoon title="Sponsors" />;
+    return <Sponsors />;
   }
 
   if (normalizedPath === '#/contact') {
