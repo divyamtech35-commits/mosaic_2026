@@ -43,7 +43,7 @@ export const Hero: React.FC = () => {
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 2.0, duration: 1 }}
-          className="text-center mb-0 mt-6"
+          className="text-center mb-0 mt-8 md:mt-10"
         >
           <div className="font-serif text-3xl md:text-[36px] text-mosaic-cream tracking-wide mb-2 flex justify-center items-center">
             <span>26</span>

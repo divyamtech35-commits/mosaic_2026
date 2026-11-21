@@ -8,7 +8,7 @@ export const CTAButtons: React.FC = () => {
       initial={{ opacity: 0, y: 10 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: 2.4, duration: 1 }}
-      className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-6 mb-4 w-full px-4"
+      className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-4 mb-4 w-full px-4"
     >
       {/* Register button removed as per client request */}
       <a
