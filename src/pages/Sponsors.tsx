@@ -12,6 +12,12 @@ const sponsors = [
     ],
   },
   {
+    category: 'Banking',
+    partners: [
+      { name: 'Bank of Baroda', role: 'Banking Partner', logo: '/sponsors/bank-of-baroda.png' },
+    ],
+  },
+  {
     category: 'Festival & fitness',
     partners: [
       { name: 'Coca-Cola', role: 'Beverage Partner', logo: '/sponsors/coca-cola.png' },
