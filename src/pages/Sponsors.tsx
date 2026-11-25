@@ -4,45 +4,26 @@ import { Navbar } from '../components/Navbar';
 import { Footer } from '../components/Footer';
 
 const sponsors = [
-  {
-    category: 'Healthcare',
-    partners: [
-      { name: 'Navita Pharmaceuticals', role: 'Pharma Partner', logo: '/sponsors/navita.png' },
-      { name: 'Sterling Accuris', role: 'Diagnostic Partner', logo: '/sponsors/sterling-accuris.png' },
-    ],
-  },
-  {
-    category: 'Banking',
-    partners: [
-      { name: 'Bank of Baroda', role: 'Banking Partner', logo: '/sponsors/bank-of-baroda.png' },
-    ],
-  },
-  {
-    category: 'Festival & fitness',
-    partners: [
-      { name: 'Coca-Cola', role: 'Beverage Partner', logo: '/sponsors/coca-cola.png' },
-      { name: 'Monster Energy', role: 'Energy Partner', logo: '/sponsors/monster.png' },
-      { name: 'The Gym World', role: 'Fitness Partner', logo: '/sponsors/gym-world.png' },
-    ],
-  },
-  {
-    category: 'Food partners',
-    partners: [
-      { name: 'Chiwale', role: 'Food Partner', logo: '/sponsors/chiwale.png' },
-      { name: 'El Mexicano', role: 'Food Partner', logo: '/sponsors/el-mexicano.png' },
-      { name: 'Parkar Ice Cream', role: 'Food Partner', logo: '/sponsors/parkar.png' },
-      { name: 'Tiramisu', role: 'Food Partner', logo: '/sponsors/tiramisu.png' },
-    ],
-  },
-  {
-    category: 'Experience & style',
-    partners: [
-      { name: 'Pride Elite', role: 'Hospitality Partner', logo: '/sponsors/pride-elite.png' },
-      { name: 'White Carbon', role: 'Experience & Entertainment Partner', logo: '/sponsors/white-carbon.png' },
-      { name: 'Toni & Guy Gandhinagar', role: 'Styling Partner', logo: '/sponsors/toni-guy.png' },
-      { name: 'Nakoda Jewellers', role: 'Jewellery Partner', logo: '/sponsors/nakoda-jewellers.png' },
-    ],
-  },
+  { name: 'Gujarat Tourism', role: 'Associate Sponsor', logo: '/sponsors/associate-sponsor.png' },
+  { name: 'Sterling Accuris', role: 'Co-Sponsor', logo: '/sponsors/sterling-accuris.png' },
+  { name: 'The Zero Sugar', role: 'Festival Curation Partner', logo: '/sponsors/zero-sugar.png' },
+  { name: 'Navita Pharmaceuticals', role: 'Pharma Partner', logo: '/sponsors/navita.png' },
+  { name: 'Coca-Cola', role: 'Beverage Partner', logo: '/sponsors/coca-cola.png' },
+  { name: 'Monster Energy', role: 'Energy Partner', logo: '/sponsors/monster.png' },
+  { name: 'Bank of Baroda', role: 'Banking Partner', logo: '/sponsors/bank-of-baroda.png' },
+  { name: 'Pride Elite', role: 'Hospitality Partner', logo: '/sponsors/pride-elite.png' },
+  { name: 'White Carbon', role: 'Experience & Entertainment Partner', logo: '/sponsors/white-carbon.png' },
+  { name: 'Toni & Guy Gandhinagar', role: 'Styling Partner', logo: '/sponsors/toni-guy.png' },
+  { name: 'Nakoda Jewellers', role: 'Jewellery Partner', logo: '/sponsors/nakoda-jewellers.png' },
+  { name: 'Champion Premium', role: 'Fragrance Partner Premium', logo: '/sponsors/champion-premium.png' },
+  { name: 'The Gym World', role: 'Fitness Partner', logo: '/sponsors/gym-world.png' },
+  { name: 'Gandhinagar Sports Academy', role: 'Sports Partner', logo: '/sponsors/gandhinagar-sports-academy.png' },
+  { name: 'Tutorials', role: 'Educational Partner', logo: '/sponsors/tutorials.png' },
+  { name: 'Marrow', role: 'Educational Partner', logo: '/sponsors/marrow.png' },
+  { name: 'Parkar Ice Cream', role: 'Food Partner', logo: '/sponsors/parkar.png' },
+  { name: 'Tiramisu', role: 'Food Partner', logo: '/sponsors/tiramisu.png' },
+  { name: 'Chaiwale', role: 'Food Partner', logo: '/sponsors/chiwale.png' },
+  { name: 'El Mexicano', role: 'Food Partner', logo: '/sponsors/el-mexicano.png' },
 ];
 
 const affiliations = [
@@ -100,13 +81,12 @@ export const Sponsors: React.FC = () => {
       </header>
 
       <div className="mx-auto max-w-3xl space-y-8 px-4 pb-14 sm:space-y-10 sm:px-6 sm:pb-20">
-        {sponsors.map((group, groupIndex) => (
-          <section key={group.category} aria-labelledby={`sponsor-category-${groupIndex}`}>
-            <h2 id={`sponsor-category-${groupIndex}`} className="mb-3 border-b border-white/15 pb-2 text-[10px] font-semibold uppercase tracking-[0.22em] text-mosaic-gold sm:mb-4 sm:text-xs">
-              {group.category}
-            </h2>
-            <div className="space-y-3">
-              {group.partners.map((partner, index) => (
+        <section aria-labelledby="partner-list-heading">
+          <h2 id="partner-list-heading" className="mb-3 border-b border-white/15 pb-2 text-[10px] font-semibold uppercase tracking-[0.22em] text-mosaic-gold sm:mb-4 sm:text-xs">
+            MOSAIC 2026 Partners
+          </h2>
+          <div className="space-y-3">
+            {sponsors.map((partner, index) => (
                 <motion.article
                   key={partner.name}
                   initial={reduceMotion ? false : { opacity: 0, y: 8 }}
@@ -138,10 +118,9 @@ export const Sponsors: React.FC = () => {
                     </div>
                   </div>
                 </motion.article>
-              ))}
-            </div>
-          </section>
-        ))}
+            ))}
+          </div>
+        </section>
 
         <section aria-labelledby="affiliations-heading">
           <h2 id="affiliations-heading" className="mb-3 border-b border-white/15 pb-2 text-[10px] font-semibold uppercase tracking-[0.22em] text-mosaic-gold sm:mb-4 sm:text-xs">
